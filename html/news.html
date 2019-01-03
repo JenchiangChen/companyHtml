@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" type="text/css" href="../banner-about/statics/css/lib2.css">
+    <link rel="stylesheet" type="text/css" href="../banner-about/statics/css/style.2041.css">
+    <link rel="stylesheet" type="text/css" href="../banner-about/statics/css/bwhite.css" id="themeCssPath">
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    #ul li{
+        padding-left: 50px;
+        height: 120px;
+        overflow: hidden;
+    }
+    #ul li img{
+        width: 130px;
+        height: 90px;
+        float: left;
+    }
+    .txt{
+        width: 450px;
+        height: 100px;
+        margin-left: 20px;
+    }
+    .txt p:nth-of-type(1){
+        width: 300px;
+        height: 20px;
+        font-size: 14px;
+        color: #7a7a7a;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .txt p:nth-of-type(1):hover{
+        color: #fff;
+    }
+    .txt p:nth-of-type(2){
+        font-size: 12px;
+        color: #414141;
+        margin-top: 40px;
+    }
+    .news{
+        margin-top: 50px;
+    }
+    .new-left{
+        width: 60em;
+        height: 700px;
+        float: left;
+        padding-left: 10px;
+    }
+    .article p{
+        text-indent: 2em;
+        font-size: 16px;
+    }
+
+</style>
+<body>
+<h2 style="display: block;width: 100%;height: 35px;color: #fff;text-align: center;margin-top: 30px">新闻中心</h2>
+<p style="display: block;width: 100%;height: 20px;color: #989898;text-align: center;margin-bottom: 20px">New Center</p>
+<div class="module_container" style="border-bottom: 1px solid #262626;">
+    <div class="container_target wow" style="margin-right: 50px">您的位置：
+        <a href="main.html">首页</a><i class="fa fa-angle-right"></i>
+        <a href="#">新闻中心</a>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="news">
+    <div class="new-left">
+        <div class="new-container" style="display: block">
+            <div id="postContent1">
+                <div id="postInfo1" style="margin-left: 30px">
+                    <p class="title" style="font-size: 14px"></p>
+                    <p class="subtitle" style="margin-top: 10px"></p>
+                </div>
+                <div class="postbody">
+                    <p style="display: block;width: 100px;height: 30px;margin: 30px auto;font-size: 20px"></p>
+                    <div class="article">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="new-right">
+        <ul id="ul">
+        </ul>
+    </div>
+</div>
+<p style="position: absolute;margin-left: 500px;margin-top: 40px">COPYRIGHT (©) 2018  新闻中心. GDOU</p>
+</body>
+<script>
+    $.ajax({
+        url: "../news/package.json",//json文件位置
+        type: "GET",//请求方式为get
+        dataType: "json", //返回数据格式为json
+        success: function(data) {//请求成功完成后要执行的方法
+            //each循环 使用$.each方法遍历返回的数据date
+            $.each(data.data.slider, function(i, item) {
+                var img='<img src="'+item.picUrl+'">';
+                var p1='<p>'+item.title+'</p>';
+                var p2='<P>'+item.date+'</p>';
+                var parentdiv=$('<div></div>');
+                parentdiv.addClass('txt');
+                parentdiv.append(p1);
+                parentdiv.append(p2);
+                var li=$('<li></li>');
+                li.append(img)
+                li.append(parentdiv);
+                $('#ul').append(li);
+            })
+            $('#ul li').click(function() {
+                $('.postbody p').text('前言')
+                $('.article').text("")
+                $('#postInfo1 .title').text(data.data.slider[$(this).index()].title)
+                $('#postInfo1 .subtitle').text(data.data.slider[$(this).index()].date)
+                clickNew($(this).index())
+            })
+            function clickNew(num) {
+                var content = data.data.slider[num].article
+                var para = ""
+                var inner = ""
+                for (a = 0; a < content.length;) {
+                    if (content[a] != '*') {
+                        para += content[a];//根据'*'字符来对内容分割
+                    }
+                    else {
+                        inner += insertparagraph(para);//分割的单一段落内容放入到<p>元素中
+                        para = "";//清空
+                    }
+                    a++;
+                }
+                inner += insertparagraph(para);//添加最后一段内容
+                $('.article').append(inner)
+
+//放入到<p>元素中
+                function insertparagraph(text) {
+                    var str = "<p>"
+                    str += text;
+                    str += "</p>"
+                    return str;
+                }
+
+            }
+
+                // $('.article p').text(data.data.slider[$(this).index()].article)
+
+        }
+    })
+
+</script>
+</html>

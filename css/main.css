@@ -1,0 +1,607 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    border-top: 1px solid #cccccc;
+    background-color: #000000;
+}
+/*导航条*/
+.navigation {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(28,28,28);
+    float: left;
+}
+.navigation .icon-enter {
+    display: block;
+    line-height: 80px;
+    width: 16%;
+    float: left;
+    width: 200px;
+}
+.menu{
+    margin-left: -50px;
+}
+.menu ul li {
+    float: left;
+    width: 80px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    overflow: hidden;
+}
+.menu ul li a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+}
+.menu ul li:hover{
+    border-bottom: 3px #52bfff solid;
+}
+.menu-right{
+    display: block;
+    top: 30px;
+    width: 300px;
+    height: 80px;
+    margin-left: 8%;
+    float: left;
+}
+.menu-right .member a{
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 70px;
+    text-decoration: none;
+    float: left;
+}
+.btn{
+    width: 200px;
+    margin-left: 5%;
+    margin-top: 12px;
+}
+.btn div{
+    float: left;
+}
+.btn .login{
+    border-radius: 15px 0 0 15px;
+    height: 30px;
+    background-color: #52bfff;
+}
+.btn .login a {
+    display: inline-block;
+    width: 50px ;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 80px;
+    text-decoration: none;
+    margin: -25px 0 0 20px;
+}
+.btn .login a:hover{
+    color: rgba(204, 204, 204, 0.7);
+}
+.btn .register {
+    border-radius: 0 15px 15px 0;
+    height: 30px;
+    background-color: #52bfff;
+}
+.btn .register a {
+    display: inline-block;
+    width: 50px ;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 80px;
+    text-decoration: none;
+    margin: -25px 12px 0 15px;
+}
+.btn .register a:hover{
+    color: rgba(204, 204, 204, 0.7);
+}
+.member a:hover{
+    color: #ff3d0c !important;
+}
+
+
+/*轮播图*/
+.container-banner{
+    position: absolute;
+    top: 80px;
+}
+.carousel-indicators{
+    bottom:120px;
+}
+.carousel-indicators  li{
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+.carousel-indicators  .active{
+    width: 17px;
+    height: 17px;
+    background-color: #00b3ee;
+    border: none;
+}
+.item{
+    z-index: 1;
+}
+.container-back{
+    width: 100%;
+    height: 120px;
+    margin-top: -120px;
+    padding-top:    30px;
+    background: black;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 2;
+}
+.container{
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    margin-top: -120px;
+    color: #fff;
+    z-index: 33;
+}
+.container .row{
+    height: 100%;
+}
+.container .row a{
+    display: block;
+    width: 25%;
+    height: 100%;
+    color: #fff;
+    float: left;
+}
+.container a:nth-of-type(1):hover{
+    background: url("../img/a.jpg")center center;
+}
+.container a:nth-of-type(2):hover{
+    background: url("../img/b.jpg")center center;
+}
+.container a:nth-of-type(3):hover{
+    background: url("../img/c.jpg")center center;
+}
+.container a:nth-of-type(4):hover{
+    background: url("../img/d.jpg")center center;
+}
+.col-lg-3{
+    width: 100%;
+    height: 100%;
+}
+.icon{
+    width: 35%;
+    height: 80%;
+    float: left;
+    margin-top: 13px;
+}
+.icon img{
+    width: 100%;
+    height: 100%;
+}
+.icon-g{
+    float: left;
+    width: 65%;
+    height: 100%;
+    margin-top: 13px;
+}
+.icon-g h3,p{
+    text-align: left;
+}
+.adver{
+    color: #fff;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: -40%;
+    z-index: 999;
+}
+.sweep-btn a{
+    color: #00b3ee;
+    font-size: 18px;
+    display: block;
+    width: 230px;
+    height: 58px;
+    border: 1px solid #00b3ee;
+    background: none;
+    padding: 0 20px;
+    border-radius: 5px;
+    line-height: 58px;
+    text-align: center;
+    margin-top: 50px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.sweep-btn a:hover{
+    color: #fff;
+    background-color: #00b3ee;
+}
+
+
+/*分页*/
+.paging-container{
+    width: 100%;
+    height: 974px;
+    margin-top: 660px;
+    background-color: black;
+    padding-top: 1px;
+}
+.text-container{
+    margin-top: 35px;
+    margin-left: 50px;
+}
+.paging-container .text-container h3{
+    color: #fff;
+}
+.paging-container .text-container p{
+    margin-top: 20px;
+    color: rgb(163,163,163);
+}
+.pagings{
+    margin-top: 50px;
+}
+.pagings .left{
+    width: 330px;
+    height: 822px;
+    float: left;
+}
+.pagings .right{
+    width: 500px;
+    height: 500px;
+    float: left;
+}
+.pagings .left ul li{
+    width: 330px;
+    height: 137px;
+    float: left;
+    background-color: rgba(56,55,60,.6);
+}
+.pagings .left ul  li.active{
+    background-color: rgb(27,161,230);
+}
+.pagings .left ul li p{
+    display: block;
+    width: 330px;
+    height: 60px;
+    text-align: center;
+    margin: 10px auto;
+    color: #fff;
+}
+.pagings .left ul li:nth-of-type(1) i{
+    display: block;
+    width: 100px;
+    height: 60px;
+    margin: 10px auto;
+    background: url("../img/icon.png") 0 -200px;
+}
+.pagings .left ul  li.active:nth-of-type(1) i{
+    background: url("../img/icon.png") 0 -260px;
+}
+.pagings .left ul li:nth-of-type(2) i{
+    display: block;
+    width: 100px;
+    height: 60px;
+    margin: 10px auto;
+    background: url("../img/icon.png") -100px -200px;
+}
+.pagings .left ul  li.active:nth-of-type(2) i{
+    background: url("../img/icon.png") -100px -260px;
+}
+.pagings .left ul li:nth-of-type(3) i{
+    display: block;
+    width: 100px;
+    height: 60px;
+    margin: 10px auto;
+    background: url("../img/icon.png") -200px -200px;
+}
+.pagings .left ul  li.active:nth-of-type(3) i{
+    background: url("../img/icon.png") -200px -260px;
+}
+.pagings .left ul li:nth-of-type(4) i{
+    display: block;
+    width: 100px;
+    height: 60px;
+    margin: 10px auto;
+    background: url("../img/solution-icon4.png")no-repeat center;
+}
+.pagings .left ul  li.active:nth-of-type(4) i{
+    background: url("../img/solution-icon4-active.png") no-repeat center;
+}
+.pagings .left ul li:nth-of-type(5) i{
+    display: block;
+    width: 100px;
+    height: 60px;
+    margin: 10px auto;
+    background: url("../img/icon.png") -400px -200px;
+}
+.pagings .left ul  li.active:nth-of-type(5) i{
+    background: url("../img/icon.png") -400px -260px;
+}
+.pagings .left ul li:nth-of-type(6) i{
+    display: block;
+    width: 100px;
+    height: 60px;
+    margin: 10px auto;
+    background: url("../img/solution-icon6.png")no-repeat center ;
+}
+.pagings .left ul  li.active:nth-of-type(6) i{
+    background: url("../img/solution-icon6-active.png") no-repeat center;
+}
+.pagings .left ul li i{
+    text-align: center;
+    display: block;
+    height: 20px;
+    font-size: 16px;
+}
+pagings .left ul li p{
+     text-align: center;
+     display: block;
+     height: 20px;
+     font-size: 16px;
+ }
+.pagings .right ul{
+    width: 900px;
+    height: 500px;
+}
+.pagings .right ul li{
+    position: absolute;
+    width: 930px;
+    height: 510px;
+}
+.pagings .right .text-div{
+    width: 100%;
+    height: 100px;
+    padding-left: 100px;
+}
+.text-div h2{
+    display: block;
+    width: 100%;
+    color: #fff;
+}
+.text-div p{
+    color: rgb(121,121,121);
+    display: block;
+    margin-top: 20px;
+}
+.icon-div{
+    display: block;
+    width: 100%;
+    height: 130px;
+
+}
+.icon-contain{
+    width: 84%;
+    height: 130px;
+    margin: 130px auto;
+}
+.icon-contain .icon{
+    width: 25%;
+    height: 130px;
+}
+.icon-top{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+.icon-bot{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    color: #fff;
+}
+.s-button a{
+    display: block;
+    width: 142px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 200px;
+    margin-left: 100px;
+    text-decoration: none;
+}
+.s-button a:hover{
+    color: #00b3ee;
+    border: 1px solid #00b3ee;
+}
+
+/*为什么选择我们*/
+.choose{
+    width: 100%;
+    background-color: #000000;
+}
+.choose .text-contain{
+    width: 100%;
+    padding-left: 30px;
+    margin-top: 50px;
+}
+.choose .text-contain h2{
+    color: #fff;
+}
+.choose .bg{
+    width: 100%;
+    height: 510px;
+    margin-top: 50px;
+}
+.choose .bg-pic{
+    width: 100%;
+    height: 510px;
+    background: url("../img/choose.jpg");
+}
+.choose .bg ul {
+    display: none;
+    width: 100%;
+    height: 100px;
+    margin-top: -300px;
+}
+.choose .bg ul li{
+    width: 350px;
+    height: 100px;
+    background-color: #00b3ee;
+    float: left;
+    margin-right:60px;
+}
+.choose .footer{
+    width: 100%;
+    height: 373px;
+    margin-top: -19px;
+}
+.choose .footer ul {
+    width: 100%;
+    height: 150px;
+    background-color: #1d1d1d;
+}
+.footer ul li{
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+.footer .ft-icon{
+    width: 100px;
+    height: 100px;
+    margin: 25px 0;
+    float: left;
+}
+.footer .ft-text{
+    width: 200px;
+    height: 120px;
+    margin: 25px 0;
+    float: left;
+}
+.footer .ft-text h3{
+    color: #fff;
+}
+.footer .ft-text p{
+    color: #737373;
+}
+.footer .ft-bot{
+    width: 100%;
+    height: 223px;
+    margin-top: -20px;
+    padding: 60px 0px;
+    background-color: #23262a;
+}
+.ft-bot .left{
+    width: 33.33%;
+    height: 50px;
+    float: left;
+}
+.ft-bot .left .phone{
+    width: 400px;
+    height: 100px;
+    background: url("../img/icon.png") -700px -350px;
+    border-right:1px solid #3b3b3b;
+}
+.ft-bot .mid {
+    width: 50%;
+    height: 100px;
+    float: left;
+    margin: 0 auto;
+}
+.ft-bot .mid .mid-top{
+    width: 100%;
+    height: 60px;
+}
+.ft-bot .mid .mid-top ul{
+    width: 100%;
+    height: 30px;
+    background-color: #23262a;
+    padding-left: 30px;
+}
+.ft-bot .mid .mid-top ul li{
+    width: 12.5%;
+    height: 30px;
+    float: left;
+    text-align: left;
+}
+.ft-bot .mid .mid-top ul li:nth-of-type(7){
+    width: 7.5%;
+}
+.ft-bot .mid .mid-top ul li a{
+    color: #cccccc;
+    text-decoration: none;
+}
+.ft-bot .mid .mid-top ul li a:hover{
+    color: #00b3ee;
+}
+.ft-bot .mid .mid-bot {
+    width: 100%;
+    height: 40px;
+    padding-left: 30px;
+}
+.ft-bot .mid .mid-bot p{
+    display: block;
+    color: #6a6a6a;
+    width: 50%;
+    height:20px;
+    float: left;
+    font-size: 12px;
+}.ft-bot .right {
+     width: 16.67%;
+     height: 40px;
+    float: left;
+    padding-left: 50px;
+ }
+.ft-bot .right .pic .pic1{
+    display: none;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 2320px;
+    right: 100px;
+}
+.ft-bot .right .pic .pic1 img{
+    width: 150px;
+    height: 150px;
+}
+.ft-bot .right .pic .pic2{
+    display: none;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 2320px;
+    right: 40px;
+
+}
+.ft-bot .right .pic .pic2 img{
+    width: 150px;
+    height: 150px;
+}
+ .ft-bot .right .phone .icon{
+     width: 50px;
+     height: 50px;
+     background: url("../img/icon.png")-100px -850px;
+     float: left;
+     margin-right: 10px;
+ }
+ .ft-bot .right .wechat .icon{
+     width: 50px;
+     height: 50px;
+     background: url("../img/icon.png")0 -850px;
+     float: left;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

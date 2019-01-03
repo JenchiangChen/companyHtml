@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../banner-about/statics/css/lib2.css">
+    <link rel="stylesheet" type="text/css" href="../banner-about/statics/css/style.2041.css">
+    <link rel="stylesheet" type="text/css" href="../banner-about/statics/css/bwhite.css" id="themeCssPath">
+    <script type="text/javascript" src="../banner-about/statics/js/jquery.min.js"></script>
+    <style type="text/css">
+        body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";background-color: #111111
+        }
+        #allmap {height: 500px;width:100%;overflow: hidden;}
+        #result {width:100%;font-size:12px;}
+        dl,dt,dd,ul,li{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        dt{
+            font-size:14px;
+            font-family:"微软雅黑";
+            font-weight:bold;
+            border-bottom:1px dotted #000;
+            padding:5px 0 5px 5px;
+            margin:5px 0;
+        }
+        dd{
+            padding:5px 0 0 5px;
+        }
+        li{
+            line-height:28px;
+        }
+        #allmap{
+            width: 1000px;
+            height: 600px;
+            margin-top: 100px;
+        }
+        .map-top{
+            color: #FFF;
+            width: 200px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .map-top h1{
+            width: 200px;
+            height: 50px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .map-top p{
+            color: #aaaaaa;
+            text-align: center;
+
+        }
+        .map-mid{
+            margin-top: 100px;
+            float: left;
+        }
+        .map-mid ul{
+            width: 200px;
+            height: 500px;
+        }
+        .map-mid ul li{
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            background-color: #393939;
+            cursor: pointer;
+        }
+        .map-mid ul li:hover{
+            background-color: #52bfff;
+            color: #fff;
+        }
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=YVBBWzWcpvy7NGVPBLzYsP3sF1ynZcL6"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    <title>GDOU站点地图</title>
+</head>
+<body>
+<div class="map-top">
+    <h1>公司总部地图</h1>
+    <p>The map of the company</p>
+</div>
+<img src="../img/map-top.jpg" alt="">
+<div class="module_container" style="padding-right: 20px;border-bottom: 1px solid #2e2e2e">
+    <div class="container_target wow">您的位置：
+        <a href="main.html">首页</a><i class="fa fa-angle-right"></i>
+        <a href="#">地图</a>
+        <div class="clear"></div>
+    </div>
+
+    <div class="clear"></div>
+</div>
+<div class="map-mid">
+    <ul>
+        <li>站点地图</li>
+        <li>站点地图</li>
+        <li>站点地图</li>
+        <li>站点地图</li>
+        <li>站点地图</li>
+        <li>站点地图</li>
+    </ul>
+</div>
+<div id="allmap">
+</div>
+<div id="result">
+    <input type="button" value="默认样式" onclick="searchInfoWindow.open(marker);"/>
+    <input type="button" value="样式1" onclick="openInfoWindow1()"/>
+    <input type="button" value="样式2" onclick="openInfoWindow2()"/>
+    <input type="button" value="样式3" onclick="openInfoWindow3()"/>
+</div>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map('allmap');
+    var poi = new BMap.Point(110.307239,21.157362);
+    map.centerAndZoom(poi, 16);
+    map.enableScrollWheelZoom();
+
+    var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+        '<img src="../img/baidu.jpg" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
+        '地址：广东省湛江市麻章区海大路一号广东海洋大学主校区<br/>电话：17665053234<br/>简介：网络建设GDOU公司总部' +
+        '</div>';
+
+    //创建检索信息窗口对象
+    var searchInfoWindow = null;
+    searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+        title  : "GDOU大厦",      //标题
+        width  : 290,             //宽度
+        height : 105,              //高度
+        panel  : "panel",         //检索结果面板
+        enableAutoPan : true,     //自动平移
+        searchTypes   :[
+            BMAPLIB_TAB_SEARCH,   //周边检索
+            BMAPLIB_TAB_TO_HERE,  //到这里去
+            BMAPLIB_TAB_FROM_HERE //从这里出发
+        ]
+    });
+    var marker = new BMap.Marker(poi); //创建marker对象
+    marker.enableDragging(); //marker可拖拽
+    marker.addEventListener("click", function(e){
+        searchInfoWindow.open(marker);
+    })
+    map.addOverlay(marker); //在地图中添加marker
+    //样式1
+    var searchInfoWindow1 = new BMapLib.SearchInfoWindow(map, "信息框1内容", {
+        title: "信息框1", //标题
+        panel : "panel", //检索结果面板
+        enableAutoPan : true, //自动平移
+        searchTypes :[
+            BMAPLIB_TAB_FROM_HERE, //从这里出发
+            BMAPLIB_TAB_SEARCH   //周边检索
+        ]
+    });
+    function openInfoWindow1() {
+        searchInfoWindow1.open(new BMap.Point(116.319852,40.057031));
+    }
+    //样式2
+    var searchInfoWindow2 = new BMapLib.SearchInfoWindow(map, "信息框2内容", {
+        title: "信息框2", //标题
+        panel : "panel", //检索结果面板
+        enableAutoPan : true, //自动平移
+        searchTypes :[
+            BMAPLIB_TAB_SEARCH   //周边检索
+        ]
+    });
+    function openInfoWindow2() {
+        searchInfoWindow2.open(new BMap.Point(110.307239,21.157362));
+    }
+    //样式3
+    var searchInfoWindow3 = new BMapLib.SearchInfoWindow(map, "信息框3内容", {
+        title: "信息框3", //标题
+        width: 290, //宽度
+        height: 40, //高度
+        panel : "panel", //检索结果面板
+        enableAutoPan : true, //自动平移
+        searchTypes :[
+        ]
+    });
+    function openInfoWindow3() {
+        searchInfoWindow3.open(new BMap.Point(110.307239,21.157362));
+    }
+</script>
+</body>
+</html>

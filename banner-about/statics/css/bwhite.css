@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+.agent-pc ::-webkit-scrollbar-thumb:hover{background-color:#3b3b3b}
+
+#header .nav > div.move{ background-color:#fff;}
+
+#indexPage #topSlider .owl-theme .owl-nav [class*="owl-"]:hover{background-color: rgba(59,59,59,.5);}
+#indexPage #topSlider .progress{background-color: rgba(59,59,59,.8);}
+
+.module .container_category a .move{background-color: rgba(59,59,59,.7);}
+
+.mlist.service_tabs .tab_button .content_list .item_block:hover, .module.mcustomize .description a.more:hover{background-color: #3b3b3b;border-color: #3b3b3b;}
+.mlist.service_tabs .tab_content .owl-theme .owl-nav > div:hover{background-color: #3b3b3b;border-color: #3b3b3b;}
+.mlist.service_tabs .tab_button .content_list .item_block.active .item_info .nums{ color:#3b3b3b}
+
+.mlist.project .content_list .item_block .item_wrapper, .mlist.team .content_list .item_block:hover .item_wrapper{background-color: rgba(0,0,0,.8);}
+#fixed_projectPost #postWrapper #postInfo #postControl .button:hover{background-color: #3b3b3b;border-color: #3b3b3b;}
+#fixed_projectPost #imageWrapper .owl-theme .owl-nav div:hover{background-color: #3b3b3b;}
+
+.module.mcustomize .description a.more::before{background-color: #3b3b3b;}
+
+.mlist.team .content_list .item_block .item_img .rectborder{border-color: rgba(255,255,255,.4);}
+.mlist.team .content_list .item_block .item_img .icon{background-color: #3b3b3b;}
+.mlist.team .content_list .item_block:hover .item_wrapper{border-color: rgba(59,59,59,.9);background-color: rgba(59,59,59,.9);}
+.mlistpost.team #postWrapper #postInfo .wrapper .description a.more{background-color: #3b3b3b;}
+
+.mlist.news .content_list .item_block .item_img .rectborder{border-color: rgba(255,255,255,.4);}
+.mlist.news .content_list .item_block .item_img .icon{background-color: #3b3b3b;}
+.mlistpost.news #listContent .item_tags a:hover{background-color: #3b3b3b;}
+
+#contactinfo div a:hover{background-color: #3b3b3b;border-color: #3b3b3b;}
+#contactform p .inputtxt.submit:hover{background-color: #3b3b3b;border-color: #3b3b3b;}
+
+.container_target a:last-child::before{background-color: #3b3b3b;}
+
+#online_open:hover,#shares a:hover{background-color: #3b3b3b;border-color: #3b3b3b;}
+
+.mlist.job .content_list .item_block p.more a:hover i{color:#fff}
+.mlist.job .content_list .item_block .description a.more{background-color:#3b3b3b; color:#fff}

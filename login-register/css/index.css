@@ -1,0 +1,132 @@
+/*重置默认的外边距和内边距*/
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: url("../img/1494318631621.jpg");
+}
+h3 {
+    color: #fff;
+    display: block;
+    width: 200px;
+    height: 30px;
+    margin: 50px auto;
+    font: 20px "microsoft yahei",Helvetica,Tahoma,Arial,"Microsoft jhengHei",sans-serif;
+
+}
+/*常用标签的样式重置*/
+i{
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}
+input{
+    outline: none;
+    border:none;
+
+}
+/*设定html和body的宽度为100%*/
+html,body{
+    width:100%; 
+    font: 14px/150% tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #666;
+}
+/*注册信息*/
+/*总体布局*/
+form{
+	width: 400px;
+	margin: auto;
+	margin-top: 10px;
+}
+.register-box{
+	border: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 32px;
+    border-radius: 20px ;
+    color: #fff;
+}
+.register-box label{
+	height: 52px;
+    line-height: 52px;
+    padding-left: 20px;
+    display: inline-block;
+}
+.register-box input{
+	width: 190px;
+    height: 19px;
+    background: none;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    padding-top: 16px;
+    font-size: 14px;
+    color: #fff;
+    font-family: "Microsoft YaHei","Hiragino Sans GB";
+}
+.register-box input::-webkit-input-placeholder{
+    color: #b7b7b7;
+}
+.register-box .tips{
+	position: absolute;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ccc;
+}
+/*用户名*/
+.register-box .username_label{
+	word-spacing: 10px;
+}
+/*密码，确认密码，*/
+.register-box .other_label{
+	word-spacing: 2px;
+}
+/*手机号*/
+.register-box span{
+    display: inline-block;
+    width: 77px;
+    height: 52px;
+    border-right: 1px solid #ddd;
+}
+.register-box .phone{
+	padding-left: 18px;
+}
+/*验证码*/
+#code{
+	display: inline-block;
+    width: 72px;
+    height: 52px;
+    vertical-align: middle;
+    background-color: black;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    line-height: 46px;
+    border-radius: 20px;
+}
+/*协议*/
+.arguement{
+	margin-bottom: 58px;
+    color: #000000;
+}
+.arguement input{
+
+	vertical-align: middle;
+}
+.arguement a{
+	color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+}
+/*提交按钮*/
+.submit_btn button{
+	width: 300px;
+    height: 54px;
+    color: #fff;
+    background: #00b3ee;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-left: 60px;
+    font-family: "Microsoft YaHei","Hiragino Sans GB";
+}
